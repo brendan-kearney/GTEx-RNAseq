@@ -22,7 +22,7 @@ python3 $GTExDIR/src/collapse_annotation.py \
 singularity exec --bind /data/ $GTExDIR/gtex_rnaseq_V10.sif \
    /bin/bash -c "STAR \
       --runMode genomeGenerate \
-      --genomeDir $REFDIR/references/star_index_oh75 \
+      --genomeDir $REFDIR/star_index_oh75 \
       --genomeFastaFiles $REFDIR/fasta/IGVFFI0653VCGH.fasta \
       --sjdbGTFfile $REFDIR/Gencode/v43/IGVFFI7217ZMJZ.gtf \
       --sjdbOverhang 75 \
@@ -31,6 +31,6 @@ singularity exec --bind /data/ $GTExDIR/gtex_rnaseq_V10.sif \
 singularity exec --bind /data/ $GTExDIR/gtex_rnaseq_V10.sif \
    /bin/bash -c "rsem-prepare-reference \
       $REFDIR/fasta/IGVFFI0653VCGH.fasta \
-      $REFDIR/references/rsem_reference/rsem_reference \
+      $REFDIR/rsem_reference/rsem_reference \
       --gtf $REFDIR/Gencode/v43/IGVFFI7217ZMJZ.gtf \
       --num-threads 4"
