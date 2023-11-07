@@ -14,7 +14,7 @@ GTExDIR=/data/reddylab/software/singularity/GTEx-RNAseq
 #pip install bx-python
 # Prep GTF annotation
 python3 $GTExDIR/src/collapse_annotation.py \ 
-   --collapse_only #REFDIR/gencode.v34.annotation.gtf \
+   --collapse_only REFDIR/gencode.v34.annotation.gtf \
    REFDIR/gencode.v34.GRCh38.genes.collapsed_only.gtf
 
 # STAR and RSEM reference prep
